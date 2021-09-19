@@ -23,6 +23,51 @@ Google Docs
 		Machine Learning with Tree-Based Models in Python.docx
 			Manipulating DataFrames with pandas.docx
 			Merging DataFrames with pandas.docx
+				Reading DataFrames from multiple files
+				Reading DataFrames from multiple files in a loop
+				Combining DataFrames from multiple data files
+				Sorting DataFrame with the Index & columns
+				Reindexing DataFrame from a list
+				Reindexing using another DataFrame Index
+				Adding unaligned DataFrames
+				Broadcasting in arithmetic formulas
+				Computing percentage growth of GDP
+				Converting currency of stocks
+				Appending Series with nonunique Indices
+				Appending pandas Series	
+1				Concatenating pandas Series along row axis
+				Appending DataFrames with ignore_index
+				Concatenating pandas DataFrames along column axis
+				Reading multiple files to build a DataFrame
+				Concatenating vertically to get MultiIndexed rows
+				Slicing MultiIndexed DataFrames
+				Concatenating horizontally to get MultiIndexed columns
+				Concatenating DataFrames from a dict
+				Concatenating DataFrames with inner join
+				Resampling & concatenating DataFrames with inner join	
+				Merging company DataFrames
+				Merging on a specific column
+				Merging on columns with non-matching labels
+				Merging on multiple columns
+				Joining by Index
+				Choosing a joining strategy
+				Left & right merging on multiple columns
+				Merging DataFrames with outer join
+				Using merge_ordered()
+				Using merge_asof()
+				Loading Olympic edition DataFrame
+				Loading IOC codes DataFrame
+				Building medals DataFrame
+				Counting medals by country/edition in a pivot table
+				Computing fraction of medals per Olympic edition
+				Computing percentage change in fraction of medals won
+				Building hosts DataFrame
+				Reshaping for analysis
+				Merging to compute influence
+				Plotting influence of host country
+
+				
+
 			Model Validation in Python.docx
 		Object-Oriented Programming in Python.docx
 			Pandas.docx
