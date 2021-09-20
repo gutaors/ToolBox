@@ -22,6 +22,47 @@ Google Docs
 		Machine Learning for Time Series Data in Python.docx
 		Machine Learning with Tree-Based Models in Python.docx
 			Manipulating DataFrames with pandas.docx
+					ordenacao por indice
+					indexacao posicional
+					indexando e rearranjando
+					fatiando linhas e colunas
+					sub selecionando dataframes com listas
+					limitando dados
+					filtrando colunas usando outras colunas
+					filtrando usando NaN
+					usando apply para transformar coluna
+					usando map com um diconario
+					funcoes vetorizadas
+					indexando valores e nomes
+					mudando indice de um dataframe
+					construindo o indice e depois o dataframe
+					extraindo dados com multiindex
+					definindo e ordenando indice
+					usando loc com indices nao indices
+					indexando multiplos níveis de multiindice
+					pivotando dataframes
+					pivotando indice
+					pivotando uma variável
+					pivotando todas as variáveis
+					empilhando e desempilhando dataframe
+					restaurando ordem do indice
+					adicionando nomes para legibilidade
+					melt
+					pivot tables
+					categoricos e groupby
+					groupby e agregação
+					detectando outliers com z-scores
+					preenchendo dados faltantes
+					outras transformações com apply
+					agrupando e filtrando com apply
+					agrupando e filtrando com map
+					ranqueamento com value_counts
+					dados suspeitos
+					ranqueamento
+					contando
+					reshaping reformatando
+					visualizando plot
+					plot com ordenação
 			Merging DataFrames with pandas.docx
 				Reading DataFrames from multiple files
 				Reading DataFrames from multiple files in a loop
