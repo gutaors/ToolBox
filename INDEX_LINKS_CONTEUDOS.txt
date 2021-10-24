@@ -1,5 +1,5 @@
-	
 De materiais que preciso catalogar o conteúdo são 56 arquivos-----------------------------
+
 Google Docs
 	DataCamp
 		Advanced Deep Learning with Keras in Python.docx
@@ -17,10 +17,6 @@ Google Docs
 		Importando da WEB.docx
 		Importing _ Managing Financial Data in Python.docx
 			
-
-
-
-
 		Improving Your Data Visualizations in Python.docx
 		Intermediate Python for Data Science.docx
 			Intro to Python for Finance.docx
@@ -179,249 +175,43 @@ Collaboratory colab
 			prophet não funciona com hollidays, se der erro fazer pip install hollidays 0.9.12
 			arima seria outro metodo pra isto, mas prophet é hibrido de serie temporal e machine learning
 			parse_dates no read_csv já importa a data convertendo
-		live14 deploy (no jupyterlab/notebooks) forked no meu github e https://www.youtube.com/watch?v=1hdZ0AVbQcw&t=3857s
-			nesta live temos o nb1.ipynb e o app.py
-			nb1.ipynb cria, treina e salva o modelo pickle
-				construir modelo que lê um texto e identifica se é clickbait
-				read_scv com parse_dates
-				cortar o dataset depois de uma data
-				remover pontuação dos textos
-				criar lista de palavras com score pela frequencia que aparecem
-				criar nova coluna com valor 1 em um dataframe (e 0 em outro)
-				pd.concat
-				plotar o dataset para ver se a distribuição está ok
-				funções de string str.lower substitui por minúscula
-				funções de string str.replace remove pontuação
-				TfidfVectorizer - transforma as palavras em vetores, transforma palavras em números de acordo com a freqeuncia que aparecem na mesma linhas
-				sklearn.Pipeline import make_pipeline - pega uma lista de transformadores e modelos e executa na ordem certinha 
-				media de ytrain - media dos scores para servir de baseline
-				log_loss - mede a calibragem do modelo, o AUC ranqueia (coloca os exemplos mais positivos primeiro, depois os negativos), 
-					mas a log_loss diz a frequencia que acontece na vida real ( se evento tem 30% de chance de acontecer e 
-					eu repetir 10 vezes na vida real, em 3 vezes ele  vai acontecer)
-					log_loss quanto menor melhor, o nosso deu 0,2377
-				se eu tivesse um ponto de corte, p ex só me interessa acima de 0,,7, não faria sentido retreinar em todos os dados
-				make_pipeline - recebe transformadores e modelos e cria um pipeline (passamos o fit pro TfdfiVectorizer e para o RandomForestClassifier)
-					- este cara recebe parametro min_df=1 (se a palavra aparece em um exemplo ela estará na bag of words)
-				Quantas ocorrencias da palavra faz ela elegível para entrar na bag of words  min_df=1
-				ngram_range - outro parâmetro da vetorizer, diz o número de palavras que serão tomadas juntas- 
-					pegamos palavras em conjunto para pegar contexto e frases
-				predict_proba - diz probabilidade de uma palavra pertencer a um grupo ou a outro
-				cria bag of words - o make pipeline faz isto, a bag é uma tabela com a estrutura: Documento, Palavra, frequencia
-				dump (depejar) modelo treinado no arquivo pickle
-				named_steps lista todos os passos que seu pipeline rodou
-				listar todos os itens do vocabulary - também dá para fazer no named_steps
-				cria o pickle com biblioteca joblib
-				salva o picke com dump - colocamos nome do arquivo com .z no fim, assim ele comprime
-				chama a api flask que está em app.py usando requests
-				lê um json com o resultado e cria dicionário
-				avaliar o resultado, é a chance percentual de algo ser clickbait, então se retorna
-					0,6 é porque é clickbait
-					0,006 é matéria séria
-			 app.py - cria o flask que consome o modelo
-				criar um flask bem básico
-				como ler um argumento get usando request
-				predict_proba como passar um argumento pro flask e fazer ele executar um modelo pickle e dar um score
-				json.dumps - como salvar um resultado em um dicionário
-				consumir o joblib
-				importar um json
-				instalar flask no terminal - pip install flask
-				importar flask com terminal - python -c "import flask"
-				ativar o conda no terminal -  conda activate
-				rodar com gunicorn no terminal gunicorn nomescript:nomeobjeto - gunicorn app:app
+			contagem para descobrir quantos registros por localidade -value_counts
+			filtrar dados selecionando uma localidade data[data['coluna']]=='sao
+			prophet náo precisa de séries igualmente espaçada
+			contar quantos registros possuem valor zero groupby("date")[zero].sum()
+			pegar dataset com dados anteriores a determinada data
+			roda modelo com zeros para depois rodar novamente com dados mais limpos
+			prophet so pede coluna de data e da medida que vamos prever
+			prophet exige nomes de coluna ds e y
+			divide treino e teste com sendo treino um só dia e teste o dia seguinte 
+			verifica shape de treino e teste
+			cria uma função mape para calcular erro médio percentual absoluto
+			parametros do prophet qtos periodos quero prever (24 indicando 24 hs), frequencia (funciona melhor c dados diários) history (prever também os dados que usei para treinar)
+			para prever usamos metodo predict(future)
+			prophet dá um intervalo onde o valor vai estar (max e min) e ˆy(y com chapeu) que é valor medio
+			criou função run_prophet que pega parâmetros para rodar prophet - facilita fazer simulação
+			função date_range cria pontos de datas - 39 min da live
+			outras funçÕes que ele usa são lightgbm e random RandomForest
+			testa novamente com dois dias anteriores e verifica o erro (43 min video)
+			usando uma semana antes pra treinar e prever um dia foi um resultado bem melhor
+			o ideal é pegar uma semana, prever um dia e anotar um erro, depois pegar andar um dia, pegar uma semana e anotar o erro e ir fazendo assim
+			o menor erro q conseguiu foi para 7 dias
+			outros métodos bons são arima e smooth
+			importa cross_validation do prophet que é um pouco diferente da outra
+			parametro initial - quantos dias usarei para treinar
+			period - quantos dias vou pular para fazer próxima previsáo
+			horizon - qtos dias eu vou prever
+			validação de bloco com janela deslizante (slide window) é uma técnica para verificar se o modelo funciona ao longo do temporais
+			finalmente pegamos semana anterior para prever próxima semana
+			testou ensemble de 10% da baseline e 90% do prophet e bateu o resultado
 
 
 
 
 
 
-			consumir pickle
-			ativar ambiente conda para o Python
 
 
-
-
-
-	
-De materiais que preciso catalogar o conteúdo são 56 arquivos-----------------------------
-Google Docs
-	DataCamp
-		Advanced Deep Learning with Keras in Python.docx
-		Analyzing Social Media Data in Python.docx
-		Aprendizado Ñ Supervisionado.docx
-		Case Studies in Statistical Thinking.docx
-		Cleaning Data in Python.docx
-		CURSOS LINKS DATACAMP.docx
-			Designing Machine Learning Workflows in Python.docx
-		Ensemble Methods in Python.docx
-		Experimental Design in Python.docx
-		Extreme Gradient Boosting with XGBoost.docx
-		Fraud Detection in Python.docx
-		Hyperparameter Tuning in Python.docx
-		Importando da WEB.docx
-		Importing _ Managing Financial Data in Python.docx
-			
-
-
-
-
-		Improving Your Data Visualizations in Python.docx
-		Intermediate Python for Data Science.docx
-			Intro to Python for Finance.docx
-			Machine Learning for Finance in Python.docx
-		Machine Learning for Time Series Data in Python.docx
-		Machine Learning with Tree-Based Models in Python.docx
-			Manipulating DataFrames with pandas.docx
-					ordenacao por indice
-					indexacao posicional
-					indexando e rearranjando
-					fatiando linhas e colunas
-					sub selecionando dataframes com listas
-					limitando dados
-					filtrando colunas usando outras colunas
-					filtrando usando NaN
-					usando apply para transformar coluna
-					usando map com um diconario
-					funcoes vetorizadas
-					indexando valores e nomes
-					mudando indice de um dataframe
-					construindo o indice e depois o dataframe
-					extraindo dados com multiindex
-					definindo e ordenando indice
-					usando loc com indices nao indices
-					indexando multiplos níveis de multiindice
-					pivotando dataframes
-					pivotando indice
-					pivotando uma variável
-					pivotando todas as variáveis
-					empilhando e desempilhando dataframe
-					restaurando ordem do indice
-					adicionando nomes para legibilidade
-					melt
-					pivot tables
-					categoricos e groupby
-					groupby e agregação
-					detectando outliers com z-scores
-					preenchendo dados faltantes
-					outras transformações com apply
-					agrupando e filtrando com apply
-					agrupando e filtrando com map
-					ranqueamento com value_counts
-					dados suspeitos
-					ranqueamento
-					contando
-					reshaping reformatando
-					visualizando plot
-					plot com ordenação
-			Merging DataFrames with pandas.docx
-				Lendo DataFrames de arquivos múltiplos lendo vários arquivos 
-				Lendo DataFrames de arquivos múltiplos lendo vários arquivos em loop
-				Combining DataFrames from multiple data files
-				Sorting DataFrame with the Index & columns
-				Reindexing DataFrame from a list
-				Reindexing using another DataFrame Index
-				Adding unaligned DataFrames
-				Broadcasting in arithmetic formulas
-				Computing percentage growth of GDP
-				Converting currency of stocks
-				Appending Series with nonunique Indices
-				Appending pandas Series	
-1				Concatenating pandas Series along row axis
-				Appending DataFrames with ignore_index
-				Concatenating pandas DataFrames along column axis
-				Reading multiple files to build a DataFrame
-				Concatenating vertically to get MultiIndexed rows
-				Slicing MultiIndexed DataFrames
-				Concatenating horizontally to get MultiIndexed columns
-				Concatenating DataFrames from a dict
-				Concatenating DataFrames with inner join
-				Resampling & concatenating DataFrames with inner join	
-				Merging company DataFrames
-				Merging on a specific column
-				Merging on columns with non-matching labels
-				Merging on multiple columns
-				Joining by Index
-				Choosing a joining strategy
-				Left & right merging on multiple columns
-				Merging DataFrames with outer join
-				Using merge_ordered()
-				Using merge_asof()
-				Loading Olympic edition DataFrame
-				Loading IOC codes DataFrame
-				Building medals DataFrame
-				Counting medals by country/edition in a pivot table
-				Computing fraction of medals per Olympic edition
-				Computing percentage change in fraction of medals won
-				Building hosts DataFrame
-				Reshaping for analysis
-				Merging to compute influence
-				Plotting influence of host country
-
-				
-
-			Model Validation in Python.docx
-		Object-Oriented Programming in Python.docx
-			Pandas.docx
-			Preparing for Coding Interview Questions in Python.docx
-			Preparing for Machine Learning Interview Questions in Python.docx
-			Preparing for Statistics Interview Questions in Python.docx
-		Preprocessing for Machine Learning in Python.docx
-		Python Data Science Toolbox.docx
-		Python for DataScience.docx
-		Sentiment Analysis in Python.docx
-		Statistical Thinking in Python (Part 2).docx
-		Statistical Thinking in Python part 1.docx
-		Streamlined Data Ingestion with pandas.docx
-		Supervised Learning with scikit-learn.docx
-		Supply Chain Analytics in Python.docx
-		Visualizing Geospatial Data in Python.docx
-		Web Scraping in Python.docx
-		Winning a Kaggle Competition in Python.docx
-		Writing Efficient Python Code.docx
-	Fast.AI
-		2 parte DeepLearning.docx
-		Copy of participantes_BDL_marco2018.xlsx
-		DeepLearningBrasilia.docx
-		Machine Learning - Fastai.docx
-		ML FAST AI - gravacoes.xlsx
-		ML Gravações Random_Forest_FastAi.xlsx
-		Palestra Erik.docx
-	Kaggle
-		Kaggle 3 abordagens.docx
-		Machine Learning - Curso Kaggle.docx
-		Palestra Kaggle Careers.docx
-		Prevendo autor de frases - Bag of words - naive bayes.docx
-		Python para Kaggle.docx
-		Python.docx
-Trilhas kaggle.docx
-	UDACITY
-		Intro to Machine Learning.docx
-		Udacity Pytorch.docx
-		Height and hand length of Udacians - Lesson 1.xlsx
-		Udacity Estatística.docx
-		Udacity- Data Science.xlsx
-	Udemy
-		BootCamp José Portilla.docx
-		Data Science Career Guide - Interview.xlsx
-		Datascience.docx
-		Deep Learning.docx
-		Estatística.docx
-		Finance  Jose Portilla.docx
-		Formação Cientista de Dados Fernando Amaral.xlsx
-		Machine Learning A a Z.docx
-		Machine Learning Resumo.xlsx
-		Pipeline - deploying.of.machine.learning.models.docx
-		SSIS.docx
-Collaboratory colab
-	mariofilho
-		live 12 series temporais com prophet  - https://colab.research.google.com/drive/1ymsT-iUCrlpo9gpAAItuHLh9HVvC9Rx8#scrollTo=VohAMru6dF78
-			como funciona o prophet https://facebook.github.io/prophet/
-			prophet não precisa de períodos igualmente espaçados
-			importa csv convertendo datas com parse_dates
-			sazonalidade prophet usa fourier, tem que pesquisar pra entendre
-			graficos com plotly
-			prophet não funciona com hollidays, se der erro fazer pip install hollidays 0.9.12
-			arima seria outro metodo pra isto, mas prophet é hibrido de serie temporal e machine learning
-			parse_dates no read_csv já importa a data convertendo
 		live14 deploy (no jupyterlab/notebooks) forked no meu github e https://www.youtube.com/watch?v=1hdZ0AVbQcw&t=3857s
 			nesta live temos o nb1.ipynb e o app.py
 			nb1.ipynb cria, treina e salva o modelo pickle
