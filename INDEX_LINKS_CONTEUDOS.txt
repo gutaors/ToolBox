@@ -168,3 +168,72 @@ Trilhas kaggle.docx
 		Machine Learning Resumo.xlsx
 		Pipeline - deploying.of.machine.learning.models.docx
 		SSIS.docx
+Collaboratory colab
+	mariofilho
+		live 12 series temporais com prophet  - https://colab.research.google.com/drive/1ymsT-iUCrlpo9gpAAItuHLh9HVvC9Rx8#scrollTo=VohAMru6dF78
+			como funciona o prophet https://facebook.github.io/prophet/
+			prophet não precisa de períodos igualmente espaçados
+			importa csv convertendo datas com parse_dates
+			sazonalidade prophet usa fourier, tem que pesquisar pra entendre
+			graficos com plotly
+			prophet não funciona com hollidays, se der erro fazer pip install hollidays 0.9.12
+			arima seria outro metodo pra isto, mas prophet é hibrido de serie temporal e machine learning
+			parse_dates no read_csv já importa a data convertendo
+		live14 deploy (no jupyterlab/notebooks) forked no meu github e https://www.youtube.com/watch?v=1hdZ0AVbQcw&t=3857s
+			nesta live temos o nb1.ipynb e o app.py
+			nb1.ipynb cria, treina e salva o modelo pickle
+				construir modelo que lê um texto e identifica se é clickbait
+				read_scv com parse_dates
+				cortar o dataset depois de uma data
+				remover pontuação dos textos
+				criar lista de palavras com score pela frequencia que aparecem
+				criar nova coluna com valor 1 em um dataframe (e 0 em outro)
+				pd.concat
+				plotar o dataset para ver se a distribuição está ok
+				funções de string str.lower substitui por minúscula
+				funções de string str.replace remove pontuação
+				TfidfVectorizer - transforma as palavras em vetores, transforma palavras em números de acordo com a freqeuncia que aparecem na mesma linhas
+				sklearn.Pipeline import make_pipeline - pega uma lista de transformadores e modelos e executa na ordem certinha 
+				media de ytrain - media dos scores para servir de baseline
+				log_loss - mede a calibragem do modelo, o AUC ranqueia (coloca os exemplos mais positivos primeiro, depois os negativos), 
+					mas a log_loss diz a frequencia que acontece na vida real ( se evento tem 30% de chance de acontecer e 
+					eu repetir 10 vezes na vida real, em 3 vezes ele  vai acontecer)
+					log_loss quanto menor melhor, o nosso deu 0,2377
+				se eu tivesse um ponto de corte, p ex só me interessa acima de 0,,7, não faria sentido retreinar em todos os dados
+				make_pipeline - recebe transformadores e modelos e cria um pipeline (passamos o fit pro TfdfiVectorizer e para o RandomForestClassifier)
+					- este cara recebe parametro min_df=1 (se a palavra aparece em um exemplo ela estará na bag of words)
+				Quantas ocorrencias da palavra faz ela elegível para entrar na bag of words  min_df=1
+				ngram_range - outro parâmetro da vetorizer, diz o número de palavras que serão tomadas juntas- 
+					pegamos palavras em conjunto para pegar contexto e frases
+				predict_proba - diz probabilidade de uma palavra pertencer a um grupo ou a outro
+				cria bag of words - o make pipeline faz isto, a bag é uma tabela com a estrutura: Documento, Palavra, frequencia
+				dump (depejar) modelo treinado no arquivo pickle
+				named_steps lista todos os passos que seu pipeline rodou
+				listar todos os itens do vocabulary - também dá para fazer no named_steps
+				cria o pickle com biblioteca joblib
+				salva o picke com dump - colocamos nome do arquivo com .z no fim, assim ele comprime
+				chama a api flask que está em app.py usando requests
+				lê um json com o resultado e cria dicionário
+				avaliar o resultado, é a chance percentual de algo ser clickbait, então se retorna
+					0,6 é porque é clickbait
+					0,006 é matéria séria
+			 app.py - cria o flask que consome o modelo
+				criar um flask bem básico
+				como ler um argumento get usando request
+				predict_proba como passar um argumento pro flask e fazer ele executar um modelo pickle e dar um score
+				json.dumps - como salvar um resultado em um dicionário
+				consumir o joblib
+				importar um json
+				instalar flask no terminal - pip install flask
+				importar flask com terminal - python -c "import flask"
+				ativar o conda no terminal -  conda activate
+				rodar com gunicorn no terminal gunicorn nomescript:nomeobjeto - gunicorn app:app
+
+
+
+
+
+
+			consumir pickle
+			ativar ambiente conda para o Python
+
