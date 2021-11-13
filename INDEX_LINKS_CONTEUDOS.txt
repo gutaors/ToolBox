@@ -270,3 +270,393 @@ Collaboratory colab
 			consumir pickle
 			ativar ambiente conda para o Python
 
+no VSCODE 
+	Python3
+		Conteúdo do curso
+		Seção 1: Introdução - Preparando meu
+		ambiente de desenvolvimento
+		1. Linux (Ubuntu): Criando meu ambiente de
+		desenvolvimento
+		2. Windows: Criando meu ambiente de
+		desenvolvimento
+		3. Entenda como o curso está estruturado
+		4. Dicas sobre o pycharm e o curso
+		5. Windows - Não quero/posso usar o Pycharm
+		6. Linux/Mac - Não quero/posso usar o Pycharm
+		7. Perguntas e Respostas - Como funciona?
+		8. Regras para perguntas e respostas
+		Seção 2: Python Básico (Lógica de
+		programação)
+		9. Sobre lógica
+		10. Discord para alunos
+		11. Avisos e dicas do curso
+		12. Comentários de código em Python
+		Teste 1: Perguntas
+		13. O comando print
+		Teste 2: Perguntas
+		14. Strings (texto) e aspas em Python
+		15. Tipos de dados "primitivos"
+		16. Operadores Aritméticos
+		17. Precedência dos Operadores Aritméticos
+		18. Variáveis
+		19. Solução do exercício com variáveis
+		Teste 3: Perguntas
+		20. Introdução à formatação de Strings
+		21. Desafio prático (teste seu conhecimento até
+		aqui)
+		22. Desafio prático - Solução
+		23. Input: Entrada de dados do usuário
+		Teste 5: Perguntas
+		24. IF, ELIF e ELSE + Booleans
+		25. Operadores relacionais + IF/ELIF/ELSE
+		Teste 6: Perguntas
+		26. Operadores lógicos + IF/ELIF/ELSE
+		Teste 7: Perguntas
+		27. len - Quantidade de caracteres
+		28. Documentação e funções built-in úteis
+		29. Pass e Ellipsis como placeholders
+		30. Exercícios propostos
+		31. Exercícios propostos - Solução
+		32. Formatando valores em Python
+		33. Índices e fatiamento de strings em Python
+		34. While - estrutura de repetição em Python
+		35. While/Else - Repetição com acumuladores
+		em Python
+		36. Iterando strings com while em Python
+		37. For in - Estrutura de repetição em Python
+		38. Listas em Python
+		39. Tira dúvidas: for, listas, condições e
+		concatenações
+		40. FOR / ELSE em Python
+		41. Split, Join e Enumerate em Python
+		42. Enumerate - Tira dúvidas
+		43. Desempacotamento de listas em Python
+		44. Trocando o valor entre variáveis em Python
+		45. Operação ternária em Python
+		46. Expressão condicional com operador OR
+		47. Desafio de contadores
+		48. Desafio de contadores - SOLUÇÃO
+		49. Desafio - Valide um CPF
+		50. Desafio - Valide um CPF - SOLUÇÃO
+		51. Gerando CPFs com Python
+		Seção 3: Python Intermediário
+		(Programação Procedural)
+		52. Funções (def) em Python - Parte 1
+		53. Funções (def) em Python - Parte 2
+		54. Exercícios propostos
+		55. Exercícios propostos - Solução
+		56. Funções (def) em Python - Parte 3
+		57. Funções (def) em Python - Parte 4
+		58. Exercícios propostos
+		59. Exercícios propostos - Solução
+		60. Expressões lambda (funções anônimas) em
+		Python
+		61. Tuplas em Python
+		62. Dicionários em Python
+		63. Sistema de perguntas e respostas com
+		dicionários em Python
+		64. Sets em Python (Conjuntos)
+		65. Exercício
+		66. List Comprehension em Python
+		67. Exercícios propostos
+		68. Exercícios propostos - Solução
+		69. Dictionary Comprehension em Python -
+		(Compreensão de dicionários)
+		70. Geradores, Iteradores e Iteráveis em Python
+		71. Comportamento de geradores e iteradores
+		72. Exercício proposto
+		73. Exercícios propostos - Solução
+		74. Zip e Zip_longest - Unindo iteráveis
+		75. Exercícios - somando duas listas
+		76. Exercício solucionado - somando listas
+		77. Count - Contadores infinitos
+		78. Combinations, Permutations e Product -
+		Itertools
+		79. Groupby - Agrupando valores
+		80. Map
+		81. Filter
+		82. Reduce
+		83. Try, Except - Tratando Exceções em Python
+		84. Levantando exceções em Python (raise)
+		85. Uso de try e except como condicional
+		86. Módulos padrão do Python
+		87. Como criar módulos em Python
+		88. Como criar pacotes e módulos em Python
+		89. Criando, lendo, escrevendo e apagando
+		arquivos
+		90. Caminhos de módulos e pacotes (ponto de
+		vista)
+		91. Funções decoradoras e decoradores
+		92. Problema dos parâmetros mutáveis em
+		funções
+		93. Exercício - Undo e Redo
+		94. Desafio - Valide um CNPJ
+		95. Desafio - Valide um CNPJ - SOLUÇÃO
+		96. Gerando CNPJs com a solução do desafio
+		Seção 4: Python - Introdução à
+		Programação Orientada a Objetos - POO …Seção 4: Python - Introdução à Programação Orientada a Objetos - POO (Classes)
+		97. Introdução
+		98. Classes - Python Orientado a Objetos
+		99. Curiosidades sobre convenções de nomes
+		100. Métodos de classes - Python Orientado a
+		Objetos
+		101. Métodos estáticos - Python Orientado a
+		Objetos
+		102. @property - Getters e Setters - Python
+		Orientado a Objetos
+		103. Atributos de Classe - Python Orientado a
+		Objetos
+		104. Encapsulamento - Python Orientado a
+		Objetos
+		105. [Reforço] - Getters e Setters - Parte 1
+		106. [Reforço] - Getters e Setters - Parte 2
+		107. Associação - Python Orientado a Objetos
+		108. Agregação - Python Orientado a Objetos
+		109. Composição - Python Orientado a Objetos
+		110. Herança Simples - Python Orientado a
+		Objetos
+		111. Sobreposição de membros - Python
+		Orientado a Objetos
+		112. Herança múltipla - Python Orientado a
+		Objetos
+		113. Classes Abstratas - Python Orientado a
+		Objetos
+		114. Polimorfismo de sobreposição - Python
+		Orientado a Objetos
+		115. Criando Exceções - Python Orientado a
+		Objetos
+		116. Sobrecarga de operadores - Python
+		Orientado a Objetos
+		117. Métodos mágicos - Python Orientado a
+		Objetos
+		118. Context Manager - Criando e Usando
+		gerenciadores de contexto
+		119. Herança Simples (Tira dúvidas)
+		120. Metaclasses
+		121. DocStrings - Documentação
+		122. Desafio POO
+		123. Desafio POO - Solução
+		124. PROPOSTA DE PROJETO - CALCULANDO
+		REDES IPV4
+		125. (SOLUÇÃO) PROPOSTA DE PROJETO -
+		CALCULANDO REDES IPV4
+		126. Dataclasses
+		127. Enum
+		128. Implementando um iterator
+		Seção 5: Módulos Python - os, datetime,
+		sys, json, csv, selenium, pillow e mais
+		129. if __name__ == "__main__"
+		130. Datetime - Trabalhando com data e hora em
+		Python
+		131. Datetime #2 - Datas em português
+		132. Último dia do mês em ano bissexto
+		133. OS - Percorrendo arquivos e pastas
+		134. OS + SHUTIL - Mover, copiar e apagar
+		arquivos
+		135. OS, SYS, FNMATCH - Convertendo vídeos
+		com Python + FFMPEG
+		136. JSON - JavaScript Object Notation
+		137. CSV - Comma Separated Values
+		138. Random - números aleatórios e mais
+		139. String - Template
+		140. Enviando e-mails com Python
+		141. ZIP - Compactando / Descompactando
+		arquivos
+		142. Sys.argv - Executando arquivos com
+		argumentos no sistema
+		143. Web Scraping com Python
+		144. Selenium - Automatizando tarefas no
+		navegador
+		145. Subprocess - Executando programas e
+		comandos externos
+		146. Jupyter Notebook
+		147. Threads - Executando processamentos em
+		paralelo
+		148. PyPDF2 - Unindo e dividindo arquivos PDF
+		149. Deque - Trabalhando com LIFO e FIFO
+		150. Openpyxl - Planilhas do Excel em Python
+		151. Pillow: redimensionando várias imagens
+		automaticamente
+		Seção 6: PyQT5 - Interface gráfica no
+		Python - GUI para Desktop
+		152. Instalação e primeiro contato com PyQT5
+		153. Criando uma calculadora com PyQT5
+		154. Download QT Designer para Windows
+		155. Instalando QT Designer no Windows
+		156. Instalando QT Designer no Linux
+		157. Integrando janelas do QT Designer com
+		PyQT5
+		158. Adicionando PyQT5 em código Python
+		antigo
+		Seção 7: Bases de dados com Python -
+		SQLite, MySQL e MariaDB
+		159. SQLite: usando o módulo sqlite3
+		160. DB Browser for SQLite - Windows
+		161. DB Browser for SQLite - Linux
+		162. Python sqlite3 + DB Browser for SQLite
+		163. Windows - Xampp + MySQL Workbench
+		164. Linux - MariaDB Server + MySQL
+		Workbench
+		165. CRUD com Pymysql no MySQL e Mariadb
+		Server
+		Seção 8: Django no Python - Básico
+		166. Django: Olá mundo!
+		167. Atualização 07/2021 e avisos
+		168. Usando um template HTML em comum
+		169. Página inicial
+		170. Arquivos estáticos (CSS, JS, IMG...)
+		171. Carregando URLs dinamicamente
+		172. Incluindo arquivos parciais
+		Seção 9: Django no Python - Projeto
+		Agenda
+
+		173. Projeto Agenda: Arquivos
+		7m
+
+		174. Projeto Agenda: Criando o projeto
+		16m
+
+		175. Projeto Agenda: Criando os Models
+		17m
+
+		176. Projeto Agenda: Admin
+		20m
+
+		177. Projeto Agenda: Exibindo valores nas views
+		12m
+
+		178. Projeto Agenda: Exibindo um único contato
+		13m
+
+		179. Levantando erros 404
+		9m
+
+		180. Usando condicionais
+		10m
+
+		181. Paginação
+		10m
+
+		182. Ordenando e filtrando valores
+		10m
+
+		183. Campo de pesquisa
+		26m
+
+		184. Instalando o pillow
+		1m
+		Seção 14: Testes e introdução ao TDD no
+		Python - unittest
+		246. Criando o projeto no Vscode
+		247. Github da seção
+		248. Asserções (Assertions)
+		249. Doctests
+		250. Unittest #1
+		251. Unittest #2 - Com TDD
+		252. Unittest #3 - Com TDD
+		253. Unittest #4 - Executando e organizando
+		todos os testes
+		254. Type hints e MyPy
+		Seção 15: Design Patterns (Padrões de
+		projeto - GOF) - POO Avançado
+		255. Introdução
+		256. Padrões de Projeto (Design Patterns) - Parte
+		257. Padrões de Projeto (Design Patterns) - Parte
+		258. Padrões de Projeto (Design Patterns) - Parte
+		259. Princípios SOLID
+		260. Repositório da seção
+		261. Os Livros e avisos
+		262. Os diagramas UML
+		263. Simple Factory (Criação)
+		264. Factory Method (Criação)
+		265. Abstract Factory (Criação)
+		266. Singleton #1 (Criação)
+		267. Singleton #2 (Criação)
+		268. Singleton #3 (Criação)
+		269. Monostate - Borg (Criação)
+		270. Builder (Criação)
+		271. Prototype (Criação)
+		272. Strategy (Comportamental)
+		273. Observer (Comportamental)
+		274. Command (Comportamental)
+		275. Template Method (Comportamental)
+		276. State (Comportamental)
+		277. Chain of responsibility (Comportamental)
+		278. Iterator (Comportamental)
+		279. Mediator (Comportamental)
+		280. Visitor e Interpreter (Comportamental)
+		281. Memento (Comportamental)
+		282. Adapter (Estrutural)
+		283. Façade (Estrutural)
+		284. Proxy (Estrutural)
+		285. Bridge (Estrutural)
+		286. Flyweight (Estrutural)
+		287. Composite - Teoria (Estrutural)
+		288. Composite - Código (Estrutural)
+		289. Decorator - Teoria (Estrutural)
+		290. Decorator - Código (Estrutural)
+		Seção 16: Expressões regulares com Python
+		- Regex - Módulo re (Bônus gratuito)
+		291. Conteúdo gratuito
+		292. Introdução
+		293. Github da seção
+		294. Metacaracteres
+		295. Quantificadores
+		296. Greedy e non-greedy (lazy)
+		297. Grupos e Retrovisores
+		298. Começa com, Termina com e negação
+		299. Shorthands e Flags importantes
+		300. Lookahead e Lookbehind
+		301. Validando IPv4
+		303. Validando Telefones
+		304. Validando senhas fortes com Positive
+		Lookahead
+		305. Validando números
+		306. Validando E-mails
+		Seção 17: Bases de dados Relacionais com
+		Python - SQL usando MySQL
+		307. Introdução
+		308. Diagramas entidade relacionamento (DER)
+		309. Entidades (Tabelas)
+		310. Relacionamentos de entidades
+		311. Relacionamento de um para um
+		(One-to-one)
+		312. Relacionamento de um para muitos
+		(one-to-many)
+		313. Relacionamento de muitos para muitos
+		(many-to-many)
+		314. Outras maneiras de identificar
+		relacionamentos
+		315. Instale o Docker e o Docker Compose
+		316. Subindo o MySQL via Docker Compose
+		317. Instalando o DBeaver
+		318. Mais sobre SQL
+		319. Criando a tabela users
+		320. Criando a tabela roles
+		321. Criando a tabela users_roles
+		322. Criando a tabela profiles
+		323. Colunas com tipo datetime (created_at e
+		updated_at)
+		324. Entendendo o DBeaver
+		325. Repositório para as consultas
+		326. SQL INSERT
+		327. SELECT de colunas e apelidos (alias)
+		415. Emmet Abbreviation - Dicas de
+		produtividade no VSCode
+		Seção 20: #EXTRA - Comandos Linux/Unix
+		mais usados - Aprenda a navegar no term…Seção 20: #EXTRA - Comandos Linux/Unix mais usados - Aprenda a navegar no terminal (BÔNUS)
+		417. Introdução e o comando sudo (substitute
+		user do)
+		418. Arquivo de referência
+		419. Comandos pwd, ls e mais
+		420. Navegação, caminhos absolutos e relativos,
+		pwd, ls, cd e outros comandos Unix
+		421. Manipulando diretórios e arquivos com cp,
+		mv, mkdir, rm, touch, nano e mais
+		422. Operadores e símbolos úteis para executar
+		comandos múltiplos no Linux/Unix
+		423. Background e Foreground com jobs, fg, bg
+		e kill
+		424. Outros comandos úteis, como nano, file,
+		history, pkill, whoami, hostname e uname
+		Seção 21: Notas finais
