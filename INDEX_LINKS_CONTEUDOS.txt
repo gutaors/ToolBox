@@ -4,6 +4,28 @@ Google Docs
 	DataCamp
 		Advanced Deep Learning with Keras in Python.docx
 		Analyzing Social Media Data in Python.docx
+		Analyzing_Police_Activity_with_pandas
+			qtos faltantes tem em cada coluna .isnull().sum()
+			shape
+			remove colunas apaga colunas .drop axis inplace
+			remove nulos apaga null dropna(subset=[''])
+			tipo de uma coluna dtype
+			muda tipo de coluna com astype
+			concatena duas colunas separadas por espaço str.cat(r1.campo, sep=' ')
+			exibe tipo de cada coluna r1.dtypes
+			define indice com set_index
+			exibe indice com ri.index
+			exibe nome das colunasß
+			exibe quantas ocorrencias existem para cada categoria (violações de trânsito) .value_counts()
+			exibe a proporção de cada categoria  .value_counts(normalize = True)
+			listar ocorrencias de uma categoria filtrando por outra driver_gender == 'F
+			agrupa por duas colunas ri.groupby(['driver_gender', 'violation']
+			series multi indice .loc['Moving violation', 'bad'])
+			cria serie desempilhando print(arrest_rate.unstack())
+			filtrando registros que contém string contains('Protective Frisk
+			comparando graficos de linhas
+			plotando barra
+
 		Aprendizado Ñ Supervisionado.docx
 		Case Studies in Statistical Thinking.docx
 		Cleaning Data in Python.docx
