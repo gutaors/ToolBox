@@ -238,7 +238,7 @@ Collaboratory colab
 			nesta live temos o nb1.ipynb e o app.py
 			nb1.ipynb cria, treina e salva o modelo pickle
 				construir modelo que lê um texto e identifica se é clickbait
-				read_scv com parse_dates
+				read_scv com parse_date 
 				cortar o dataset depois de uma data
 				remover pontuação dos textos
 				criar lista de palavras com score pela frequencia que aparecem
