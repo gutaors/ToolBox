@@ -64,14 +64,14 @@ Google Docs
 					definindo e ordenando indice
 					usando loc com indices nao indices
 					indexando multiplos níveis de multiindice
-					pivotando dataframes
+					pivotando dataframes (roollup girar )
 					pivotando indice
 					pivotando uma variável
 					pivotando todas as variáveis
 					empilhando e desempilhando dataframe
 					restaurando ordem do indice
 					adicionando nomes para legibilidade
-					melt
+					melt - é como um unpivot gira ao contrário - se nãoo conseguir com pivot tente com melt
 					pivot tables
 					categoricos e groupby
 					groupby e agregação
@@ -682,3 +682,9 @@ no VSCODE
 		424. Outros comandos úteis, como nano, file,
 		history, pkill, whoami, hostname e uname
 		Seção 21: Notas finais
+Jupyter Notebook \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\
+	mario filho
+		\\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\mariofilho\TutorialTitanic
+		value_counts() quantidade de cada categoria em uma variável
+		.map(transform) roda uma def em uma coluna do dataset
+		
