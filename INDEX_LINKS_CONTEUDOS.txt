@@ -373,6 +373,7 @@ no VSCODE
 		59. Exercícios propostos - Solução
 		60. Expressões lambda (funções anônimas) em
 		Python
+			sorted(list, key=lambda)
 		61. Tuplas em Python
 		62. Dicionários em Python
 		63. Sistema de perguntas e respostas com
@@ -687,4 +688,5 @@ Jupyter Notebook \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\
 		\\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\mariofilho\TutorialTitanic
 		value_counts() quantidade de cada categoria em uma variável
 		.map(transform) roda uma def em uma coluna do dataset
+		pd.series(p, index=teste[... pegamos uma série p e criamos um dataframe com ela alinhado pela chave de um dataframe existente
 		
