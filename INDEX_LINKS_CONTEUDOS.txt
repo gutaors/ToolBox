@@ -686,7 +686,10 @@ no VSCODE
 Jupyter Notebook \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\
 	mario filho
 		\\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\mariofilho\TutorialTitanic
-		value_counts() quantidade de cada categoria em uma variável
-		.map(transform) roda uma def em uma coluna do dataset
-		pd.series(p, index=teste[... pegamos uma série p e criamos um dataframe com ela alinhado pela chave de um dataframe existente
-		
+			aula1
+			aula2
+				value_counts() quantidade de cada categoria em uma variável
+				.map(transform) roda uma def em uma coluna do dataset
+				pd.series(p, index=teste[... pegamos uma série p e criamos um dataframe com ela alinhado pela chave de um dataframe existente
+				cria uma lista com nomes de features
+				cria x com features de um dataframe, pegando só aquelas que estão na lista acima
