@@ -620,6 +620,7 @@ no VSCODE
 		290. Decorator - Código (Estrutural)
 		Seção 16: Expressões regulares com Python
 		- Regex - Módulo re (Bônus gratuito)
+			regex email, ip, todas as palavras de um texto, letras repetidas, caracteres especiais
 		291. Conteúdo gratuito
 		292. Introdução
 		293. Github da seção
@@ -692,4 +693,7 @@ Jupyter Notebook \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\
 				.map(transform) roda uma def em uma coluna do dataset
 				pd.series(p, index=teste[... pegamos uma série p e criamos um dataframe com ela alinhado pela chave de um dataframe existente
 				cria uma lista com nomes de features
-				cria x com features de um dataframe, pegando só aquelas que estão na lista acima
+				cria X com features de um dataframe, pegando só aquelas que estão na lista acima
+				cria Y pegando feature específica de um dataframe
+			
+	
