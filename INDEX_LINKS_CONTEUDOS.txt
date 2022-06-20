@@ -158,7 +158,18 @@ Google Docs
 			localiza posição de palavra no texto
 			procura a posição da palavra actor em cada uma das três frases que compõem o texto
 			substituindo palavras em textos
-			
+			substituir trechos da frase por palavras de dicionário)
+			formatações de data hora
+			inserindo valores de variáveis em uma frase
+			removendo trecho de frase - tiramos o https de uma url
+			contando quantidade de palavras em uma lista
+			achando padrões com regex Regular Expressions for Pattern Matching
+			achar palavra com regex
+			achar números
+			algarismos que formam números, um a um
+			regex para achar endereços http e usuários tweeter @ 
+
+
 
 		Sentiment Analysis in Python.docx
 		Statistical Thinking in Python (Part 2).docx
