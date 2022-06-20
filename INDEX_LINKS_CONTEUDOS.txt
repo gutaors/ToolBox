@@ -142,6 +142,24 @@ Google Docs
 		Preprocessing for Machine Learning in Python.docx
 		Python Data Science Toolbox.docx
 		Python for DataScience.docx
+		Regular-Expressions-in-Python-master
+			tamanho de um texto
+			montar frase usando trechos de outras frases colar palavras
+			inverter palavras
+			comparar palavras
+			converter para minúsculas
+			separando palavras de um texto 
+			pegar a primeira palavra de um texto e tirar última letra
+			remover tag html de um texto
+			tirando vírgulas de um texto
+			juntando as palavras, sem as vírgulas, em um novo texto
+			separando as linhas de um texto (split nas quebras de linha)
+			procura duas palavras repetidas (ou três) e substitui por uma
+			localiza posição de palavra no texto
+			procura a posição da palavra actor em cada uma das três frases que compõem o texto
+			substituindo palavras em textos
+			
+
 		Sentiment Analysis in Python.docx
 		Statistical Thinking in Python (Part 2).docx
 		Statistical Thinking in Python part 1.docx
@@ -324,6 +342,7 @@ no VSCODE
 		19. Solução do exercício com variáveis
 		Teste 3: Perguntas
 		20. Introdução à formatação de Strings
+			f strings - é aquele (f'{nome} tem {idade:.2f} o .2f arredonda pra duas casas decimais')
 		21. Desafio prático (teste seu conhecimento até
 		aqui)
 		22. Desafio prático - Solução
