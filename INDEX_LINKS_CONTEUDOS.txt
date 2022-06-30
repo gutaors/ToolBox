@@ -46,14 +46,17 @@ Google Docs
 		Machine Learning for Time Series Data in Python.docx
 		Machine Learning with Tree-Based Models in Python.docx
 			Manipulating DataFrames with pandas.docx
+					ler o csv e já determinar qual a index_col
 					ordenacao por indice
 					indexacao posicional
 					indexando e rearranjando
 					fatiando linhas e colunas
 					sub selecionando dataframes com listas
 					limitando dados
+					filtra dataframe usando listas com nomes das linhas e das colunas que quer filtrar
 					filtrando colunas usando outras colunas
 					filtrando usando NaN
+					filtrando colunas que tem menos de 1000 ocorrencias diferentes de NaN (menos de 1000 preenchidos), ou seja, dados dispersos
 					usando apply para transformar coluna
 					usando map com um diconario
 					funcoes vetorizadas
