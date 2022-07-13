@@ -14,6 +14,20 @@
 # ---
 
 # +
+#itertools.combinations_with_replacement()
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations_with_replacement
+#s, n = input().split()
+x = "hack 2"
+s, n = x.split()
+print(*[''.join(i) for i in combinations_with_replacement(sorted(s), int(n))], sep="\n")
+# aqui é aquele caso que não tem repeticao, por ex, se tem ac não tem ca, se tem ah não tem ha
+# -
+
+
+
+# +
 # itertools.combinations() in Python - Hacker Rank Solution
 from itertools import combinations
 x = "hack 2"
