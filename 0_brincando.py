@@ -14,6 +14,67 @@
 # ---
 
 # +
+def saveThePrisoner(n, m, s):
+    # Write your code here
+    res = (s + m-1) % n
+    return res if res != 0 else n
+
+    t = int(input().strip())
+    for a0 in range(t):
+        n, m, s = input().strip().split(' ')
+        n, m, s = [int(n), int(m), int(s)]
+        result = saveThePrisoner(n, m, s)
+        print(result)
+
+        
+m=2
+n=5
+s=5       
+saveThePrisoner(m,n,s)
+
+
+# -
+
+# # SAVE THE PRISIONER GUILHERME SILVEIRA
+
+# SAVE THE PRISIONER GUILHERME SILVEIRA
+# https://www.youtube.com/watch?v=0aRlTx9kh18
+def saveThePrisoner(cadeiras, doces, inicial):
+    # Write your code here
+    sobraram = (doces % cadeiras)
+    if sobraram == 0 and inicial == 1:
+        return cadeiras
+    pessoa = (inicial + sobraram - 1) % cadeiras
+    if pessoa == 0:
+        return cadeiras
+    return pessoa
+
+
+#teste livre
+saveThePrisoner (3,7,3)
+
+#caso normal, 4 cadeiras, 6 doces, inicio na cadeira 1
+saveThePrisoner (4,6,1)
+
+#caso , 4 cadeiras, 4 doces, inicio na cadeira 1
+saveThePrisoner (4,4,1)
+
+#caso , 4 cadeiras, 4 doces, inicio na cadeira 2
+saveThePrisoner (4,4,2)
+
+#caso , 4 cadeiras, 4 doces, inicio na cadeira 4
+saveThePrisoner (4,4,4)
+
+#caso , 4 cadeiras, 4 doces, inicio na cadeira 1
+saveThePrisoner (4,1,1)
+
+#caso , 4 cadeiras, 3 doces, inicio na cadeira 3
+saveThePrisoner (4,3,3)
+
+#caso borda, 3 cadeiras, 7 doces, inicio na cadeira 3
+saveThePrisoner (3,7,3)
+
+# +
 # Pulando nuvens
 '''
 7
