@@ -14,23 +14,25 @@
 # ---
 
 # +
-def saveThePrisoner(n, m, s):
+def saveThePrisoner(cadeiras,  inicial, doces):
     # Write your code here
-    res = (s + m-1) % n
-    return res if res != 0 else n
-
+    res = (inicial + doces-1) % cadeiras
+    return res if res != 0 else cadeiras
+    #return res
     t = int(input().strip())
     for a0 in range(t):
-        n, m, s = input().strip().split(' ')
-        n, m, s = [int(n), int(m), int(s)]
-        result = saveThePrisoner(n, m, s)
+        cadeiras, doces, inicial = input().strip().split(' ')
+        cadeiras, doces, inicial = [int(cadeiras), int(doces), int(inicial)]
+        result = saveThePrisoner(cadeiras, doces, inicial)
         print(result)
 
-        
-m=2
-n=5
-s=5       
-saveThePrisoner(m,n,s)
+#x=(2 5 5)        
+
+cadeiras=8
+inicial=8 
+doces=9
+
+saveThePrisoner(cadeiras,inicial,doces)
 
 
 # -
@@ -54,24 +56,34 @@ def saveThePrisoner(cadeiras, doces, inicial):
 saveThePrisoner (3,7,3)
 
 #caso normal, 4 cadeiras, 6 doces, inicio na cadeira 1
+#caso que hackerrank deu de exemplo
 saveThePrisoner (4,6,1)
 
 #caso , 4 cadeiras, 4 doces, inicio na cadeira 1
+#caso normal, mesmo número de doces e cadeiras e começa na primeira
 saveThePrisoner (4,4,1)
 
 #caso , 4 cadeiras, 4 doces, inicio na cadeira 2
+#caso um pouco diferente, começa mais na frente pra ver quando roda a mesa toda e recomeça
 saveThePrisoner (4,4,2)
 
 #caso , 4 cadeiras, 4 doces, inicio na cadeira 4
+#caso borda, mesmo número de cadeiras e doces e começa na última
 saveThePrisoner (4,4,4)
 
-#caso , 4 cadeiras, 4 doces, inicio na cadeira 1
+# +
+#caso , 4 cadeiras, 1 doce, inicio na cadeira 1
+#caso borda, só dá um doce
+
 saveThePrisoner (4,1,1)
+# -
 
 #caso , 4 cadeiras, 3 doces, inicio na cadeira 3
+#caso borda, mais cadeiras que doces e começa no final
 saveThePrisoner (4,3,3)
 
 #caso borda, 3 cadeiras, 7 doces, inicio na cadeira 3
+#caso borda, mais que o dobro de doces que cadeiras e começa no final (o teste hackerrank quebrou neste caso)
 saveThePrisoner (3,7,3)
 
 # +
