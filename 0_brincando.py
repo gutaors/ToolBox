@@ -14,8 +14,128 @@
 # ---
 
 # +
-#itertools.combinations_with_replacement()
+# Pulando nuvens
+'''
+7
+0 0 1 0 0 1 0
+'''
+# você pode pular em cima de qualquer cumulus (0) que esteja uma ou duas posições depois da atual 
+# as thunder (1) devem ser evitadas - não pulamos em cima delas
 
+def jumpingOnClouds(c):   #len(c) = 8
+    current_position = 0
+    number_of_jumps = 0
+    last_cloud_postion = len(c)-1  # 7
+    last_second_postion = len(c)-2 # 6
+              #   0     <      6
+    while current_position<last_second_postion:
+        #Checking if the cloud next to the next cloud is thunderstorm
+        if c[current_position+2] == 0:   #70010010     se a segunda posição pra frente for zero pulamos duas posições
+            current_position += 2        #2,4,   7
+        else:
+            current_position += 1             #5        caso contrário, pulamos só uma posição
+        number_of_jumps += 1             # adiciona um salto à sua lista (não é o número de posições que avançamos, simplesmente salto)
+    #Checking if we are in the last cloud or the last second cloud
+    #se não estamos na última posição ainda, soma mais um salto
+    if current_position != last_cloud_postion:   # 7  != 7
+        number_of_jumps += 1              # 5
+    return number_of_jumps
+    
+entrada = '7 0 0 1 0 0 1 0'
+# entrada='6 0 0 0 0 1 0'
+c = list(map(int,entrada.split())) # o c entra sem espaços por conta do split
+print(jumpingOnClouds(c))
+
+
+# +
+#DESAFIO HACKERRANK COUNTING VALLEYS
+
+def countingValleys(steps, path):
+
+    level = 0
+    valleys = 0
+    
+    for step in path:
+    
+        if step == 'U':
+            level+=1
+                # se ele está subindo Up e atinge o nível do mar 0, então ele conta um vale
+            if level == 0:
+                valleys+=1
+                
+        else:
+            level-=1
+            
+    return valleys
+
+countingValleys(8,'UDDDUDUU')
+# -
+
+
+
+# +
+from itertools import combinations
+x = "a a c d"
+
+N = 4
+L = x.split()
+K = 2
+
+C = list(combinations(L, K))
+F = filter(lambda c: 'a' in c, C)
+print("{0:.3}".format(len(list(F))/len(C)))
+# -
+
+#print(C)
+print(list(F))
+
+# +
+import itertools
+  
+a_list = [("Animal", "cat"), 
+          ("Animal", "dog"), 
+          ("Bird", "peacock"), 
+          ("Bird", "pigeon"),
+          ("Bird", "passaralho")]
+  
+
+an_iterator = itertools.groupby(a_list, lambda x : x[0])
+  
+for key, group in an_iterator:
+    key_and_group = {key : list(group)}
+    print(key_and_group)
+
+# +
+import itertools
+  
+  
+L = [("a", 1), ("a", 2), ("b", 3), ("b", 4)]
+  
+# Key function
+key_func = lambda x: x[0]
+  
+for key, group in itertools.groupby(L, key_func):
+    print(key + " :", list(group))
+# -
+
+#Compress the String!
+from itertools import groupby
+x='1222311'
+for k, c in groupby(x):
+    print("(%d, %d)" % (len(list(c)), int(k)), end=' ')
+
+#itertools.combinations_with_replacement()
+#solucao mais simples 
+from itertools import combinations_with_replacement
+z = "hack 2"
+x=z.split()
+s,p=x[0],int(x[1])
+y=combinations_with_replacement(sorted(s),p)
+for i in (y):
+    print(*i,sep="")
+
+#itertools.combinations_with_replacement()
+# solucao com list comprehensions
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 from itertools import combinations_with_replacement
 #s, n = input().split()
@@ -23,7 +143,6 @@ x = "hack 2"
 s, n = x.split()
 print(*[''.join(i) for i in combinations_with_replacement(sorted(s), int(n))], sep="\n")
 # aqui é aquele caso que não tem repeticao, por ex, se tem ac não tem ca, se tem ah não tem ha
-# -
 
 
 
