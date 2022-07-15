@@ -13,6 +13,56 @@
 #     name: python3
 # ---
 
+# ### ORGANIZING CONTAINERS GUILHERME SILVEIRA
+
+# +
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'organizingContainers' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts 2D_INTEGER_ARRAY container as parameter.
+#
+
+def organizingContainers(containers):
+    n = len(containers)
+    capacidade_de_containers = []
+    quantidade_de_bolas = [0] * n
+    for container in containers:
+        total_do_container = sum(container)
+        capacidade_de_containers.append(total_do_container)
+        for tipo,quantidade in enumerate(container):
+            quantidade_de_bolas[tipo] += quantidade
+    sorted(capacidade_de_containers)
+    sorted(quantidade_de_bolas)
+    if capacidade_de_containers == quantidade_de_bolas:
+        return "Possible"
+    return "Impossible"
+
+
+
+# +
+print(organizingContainers([[1,3,1],[2,1,2],[3,3,3]]))
+
+print(organizingContainers([[0,2,1],[1,1,1],[2,0,0]]))
+# -
+
+2
+3
+1 3 1
+2 1 2
+3 3 3
+3
+0 2 1
+1 1 1
+2 0 0
+
+
 # +
 def saveThePrisoner(cadeiras,  inicial, doces):
     # Write your code here
