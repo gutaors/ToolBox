@@ -13,6 +13,25 @@
 #     name: python3
 # ---
 
+#         ### List Comprehensions Hackerrank
+
+x=2
+y=2
+z=2
+n=1
+x, y, z, n = int(x), int(y), int(z), int(n)
+print ([[a,b,c] for a in range(0,x+1) for b in range(0,y+1) for c in range(0,z+1) if a + b + c != n ])
+
+seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+#list(enumerate(seasons))
+list(enumerate(seasons, start=10))
+x=1
+eval('x+1')
+
+
+
+
+
 # ### ORGANIZING CONTAINERS GUILHERME SILVEIRA
 
 # +
@@ -38,8 +57,12 @@ def organizingContainers(containers):
         capacidade_de_containers.append(total_do_container)
         for tipo,quantidade in enumerate(container):
             quantidade_de_bolas[tipo] += quantidade
-    sorted(capacidade_de_containers)
-    sorted(quantidade_de_bolas)
+    #sorted(capacidade_de_containers)
+    #o sorted não devolve a variável reordenada, só na exibição
+    #por isto usamos .sort()
+    capacidade_de_containers.sort()
+    quantidade_de_bolas.sort()
+    capacidade_de_containers.sort()
     if capacidade_de_containers == quantidade_de_bolas:
         return "Possible"
     return "Impossible"
@@ -50,6 +73,11 @@ def organizingContainers(containers):
 print(organizingContainers([[1,3,1],[2,1,2],[3,3,3]]))
 
 print(organizingContainers([[0,2,1],[1,1,1],[2,0,0]]))
+
+print(organizingContainers([[2,0,0],[1,1,1],[0,2,1]]))
+
+
+print(organizingContainers([[2,0,0],[1,1,1],[0,2,1]]))
 # -
 
 2
