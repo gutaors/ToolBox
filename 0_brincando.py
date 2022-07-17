@@ -13,7 +13,63 @@
 #     name: python3
 # ---
 
-#         ### List Comprehensions Hackerrank
+# ### Sorting: Bubble Sort
+
+# +
+primeiro_elemento = '1'
+segundo_elemento = '1 2 3'
+
+#    n = int(input().strip())
+#    a = list(map(int, input().rstrip().split()))
+
+n = int(primeiro_elemento.strip())
+a = list(map(int, segundo_elemento.rstrip().split()))
+def countSwaps(a):
+    swaps=0
+    for i in range(len(a)):
+        for j in range(len(a)-1):
+            if a[j]> a[j+1]:
+                a[j],a[j+1]=a[j+1],a[j]
+                swaps+=1
+    print("Array is sorted in " + str(swaps) + " swaps.")
+    print("First Element: " + str(a[0]))
+    print("Last Element: " + str(a[len(a)-1]))
+countSwaps(a)
+# -
+
+# ### ordenação
+
+# +
+primeiro_elemento = '1'
+segundo_elemento = '1 2 3'
+
+#    n = int(input().strip())
+#    a = list(map(int, input().rstrip().split()))
+
+n = int(primeiro_elemento.strip())
+a = list(map(int, segundo_elemento.rstrip().split()))
+
+# Write your code here
+j = 1
+i = 0
+swap = []
+# Write your code here
+for i in range(n):
+    currentSwaps = 0
+    for j in range(n-1):
+        if a[j]>a[j+1]:
+            a[j],a[j+1]=a[j+1],a[j]
+            swap.append(a[i])
+            currentSwaps += 1
+    if currentSwaps == 0:
+        break
+
+print("Array is sorted in",len(swap),"swaps.")
+print("First Element:",a[0])
+print("Last Element:",a[-1])
+# -
+
+# ### List Comprehensions Hackerrank
 
 x=2
 y=2
