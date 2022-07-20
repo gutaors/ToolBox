@@ -13,8 +13,179 @@
 #     name: python3
 # ---
 
+# +
+import statistics
+
+statistics.median[12, 13, 16, 19, 12, 15]
+# -
+
+#crie lista com 'a','b' e 'c'
 alphabet = ['a','b','c']
 print (alphabet)
+
+# ### Fraudulent Activity Notifications hackerrank Guilherme Silveira
+#
+# https://www.youtube.com/watch?v=8R71Y8DJiAY&t=308s
+
+# +
+import math
+import os
+import random
+import re
+import sys
+
+#expenditure = [10,20,30,40,50]
+#d=3
+
+#pegar a mediana de gasto dos dias anteriores 
+#para calcular a mediana ordenamos os itens da lista em ordem crescente
+#se número de itens for ímpar pegamos o do meio
+#se for par, tiramos a média dos dois do meio
+
+# para isto verificar quantos itens temos excluindo o último
+#verificar se gasto de hoje é o dobro ou mais que a mediana
+
+
+
+#tamanho = len(expenditure)
+#print(tamanho)
+#expenditure.sort()
+#for i in range (tamanho-1):
+    #print (i)
+#for valor in expenditure:
+#    print(valor)
+
+def proximo_gasto(existentes, gasto):
+    for i in range(gasto+1, 201):
+        if existentes[i]>0:
+            return i
+    raise Exception("não calculei direito")
+    
+def mediana(existentes, d):
+    #3
+    if d % 2 == 1:
+        posicao = math.ceil(d/2)
+    else:
+        #4, posição é 2
+        #se temos [a, b, c, d] a posição 2 é c
+        posicao= d / 2
+    
+    #posicao = d//2
+    
+    soma = 0
+    
+    #como sao 200 valores, a gente vai fazendo arrays de 5, como estes arrays são ordenados
+    #para pegar a mediana, a gente não pode acrescentar o próxmo e retirar o primeiro, pois isto 
+    #tiraria os registros da ordem.
+    #para dar certo a gente tira o quinto de onde ele esteja e coloca o novo na posição que tenha um 
+    # menor antes e um maior depois, pra lista continuar ordenada
+    for gasto in range(201):
+        
+        quantidade = existentes[gasto]
+        if quantidade ==0:
+            continue
+            
+        #print(gasto, quantidade, posicao)
+        if soma + quantidade > posicao:
+            return gasto
+        if soma + quantidade == posicao:
+            if d % 2 == 1: # se for impar
+                return gasto
+            proximo = proximo_gasto(existentes, gasto)
+            # print(proximo)
+            total = (gasto + proximo)
+            # print(total)
+            return total / 2
+        
+        soma += quantidade
+    
+    raise Exception("fiz algo errado")
+            
+            
+def activityNotifications(expenditure, d):
+    existentes = [0] * 201        #um vetor de 200 posições, começa em 0 porque ninguém gastou nada ainda
+    fraudes = 0
+    for dia in range(len(expenditure)):
+        gasto_no_dia = expenditure[dia]
+        if dia < d:           # se dia está antes da faixa pedida, se tem q ser 4 e estou no terceiro, não faço nada
+            existentes[gasto_no_dia] += 1
+            continue
+        #será que é fraude?
+        m = mediana(existentes,d)
+        if gasto_no_dia >= m * 2:
+            fraudes += 1
+        existentes[gasto_no_dia] += 1
+        gasto_antigo = expenditure [dia - d]
+        existentes[gasto_antigo] -= 1
+    return fraudes
+
+
+# +
+            
+        
+print(activityNotifications([10,20,30,40,50],4))
+        
+print(activityNotifications([10,20,25,40,50],4))
+    
+print(activityNotifications([10,20,30,40,50],3))
+
+print(activityNotifications([30,10,20,40,50],3))
+# -
+# ### Outra solução (PASSOU NO TESTE) TIREI DAQUI  
+# https://github.com/srgnk/HackerRank/blob/master/interview-preparation-kit/fraudulent-activity-notifications.py
+
+# +
+import sys
+import bisect as bs
+
+def index(a, x):
+    'Locate the leftmost value exactly equal to x'
+    i = bs.bisect_left(a, x)
+    if i != len(a) and a[i] == x:
+        return i
+    raise ValueError
+
+def median(a_sorted, days):
+    half = len(a_sorted)//2
+    
+    if days % 2:
+        median = a_sorted[half]
+    else:
+        median = (a_sorted[half-1] + a_sorted[half])/2
+        
+    return float(median)
+
+def activityNotifications(log, days):
+    heap = sorted(log[:days])
+    res = 0
+    med = 0
+    to_del = 0
+    
+    for ind in range(days, len(log)):
+        med = median(heap, days)
+        #print("heap: {}".format(heap))
+        #print("log[{}] = {} med = {}".format(ind, log[ind], med))
+            
+        if float(log[ind]) >= 2*med:
+            res += 1
+        
+        #del heap[heap.index(log[to_del])]
+        del heap[index(heap, log[to_del])]
+        bs.insort(heap, log[ind])
+        to_del += 1
+            
+    return res
+
+
+# +
+print(activityNotifications([10,20,30,40,50],4))
+        
+print(activityNotifications([10,20,25,40,50],4))
+    
+print(activityNotifications([10,20,30,40,50],3))
+
+print(activityNotifications([30,10,20,40,50],3))
+# -
 
 # ### atualizando itens em um dicionário
 
@@ -49,6 +220,8 @@ new_dicts = [{**d,**update} for d in my_dicts]
 new_dicts
 # -
 
+
+
 # ### Outros updates de itens
 
 # +
@@ -68,7 +241,6 @@ data
 
 
 # +
-
 # update first student python subject
 # to html
 data[0]['subjects'].append('html')
