@@ -14,9 +14,133 @@
 # ---
 
 # +
-import statistics
+#versão comentada código guilherme silveira fraudulent...
+import math
+import os
+import random
+import re
+import sys
 
-statistics.median[12, 13, 16, 19, 12, 15]
+#expenditure = [10,20,30,40,50]
+#d=3
+
+#pegar a mediana de gasto dos dias anteriores 
+#para calcular a mediana ordenamos os itens da lista em ordem crescente
+#se número de itens for ímpar pegamos o do meio
+#se for par, tiramos a média dos dois do meio
+
+# para isto verificar quantos itens temos excluindo o último
+#verificar se gasto de hoje é o dobro ou mais que a mediana
+
+
+
+#tamanho = len(expenditure)
+#print(tamanho)
+#expenditure.sort()
+#for i in range (tamanho-1):
+    #print (i)
+#for valor in expenditure:
+#    print(valor)
+
+def proximo_gasto(existentes, gasto):
+    # loop percorrendo posições de um cursor
+    #recebe gasto e existentes, itera do gasto+1 até 201
+    for i in range(gasto+1, 201):
+        #se próxima posição do existentes > 0
+        if existentes[i]>0:
+            #retorna a posição, caso registro desta posição > 0
+            return i
+    raise Exception("não calculei direito")
+
+#função mediana, recebe existentes (um vetor de 200 posições) e d (=4)
+def mediana(existentes, d):
+    #3
+    #caso d seja impar
+    if d % 2 == 1:
+        posicao = math.ceil(d/2)
+    else:
+        #4, 
+        #se d é par(=4), posição é no meio
+        posicao= d / 2
+    
+    #posicao = d//2
+    
+    soma = 0
+    
+    #como sao 200 valores, a gente vai fazendo arrays de 5, como estes arrays são ordenados
+    #para pegar a mediana, a gente não pode acrescentar o próxmo e retirar o primeiro, pois isto 
+    #tiraria os registros da ordem.
+    #para dar certo a gente tira o quinto de onde ele esteja e coloca o novo na posição que tenha um 
+    # menor antes e um maior depois, pra lista continuar ordenada
+    for gasto in range(201):
+        # quantidade = valor no vetor existentes na posição gasto(que vai de 0 a 201)
+        quantidade = existentes[gasto]
+        if quantidade ==0:
+            continue
+            
+        #print(gasto, quantidade, posicao)
+        if soma + quantidade > posicao:
+            return gasto
+        if soma + quantidade == posicao:
+            if d % 2 == 1: # se for impar
+                return gasto
+            proximo = proximo_gasto(existentes, gasto)
+            # print(proximo)
+            total = (gasto + proximo)
+            # print(total)
+            return total / 2
+        
+        soma += quantidade
+    
+    raise Exception("fiz algo errado")
+
+# FUNÇÃO PRINCIPAL
+# FUNÇÃO PRINCIPAL
+# FUNÇÃO PRINCIPAL            
+def activityNotifications(expenditure, d):   #recebe expenditure (=lista de 5 itens) e d=4
+    # um vetor de 200 posições, todas posições com 0 porque ninguém gastou nada ainda
+    existentes = [0] * 201
+    fraudes = 0
+    #dia vai iterar até o tamanho de expenditure - 5
+    for dia in range(len(expenditure)):
+        #gasto no dia 0=10 1=20 2=30...
+        gasto_no_dia = expenditure[dia]
+        if dia < d:           # se dia está antes da faixa pedida (4)
+            #vetor existentes[10] (10 é o valor do dia 0) recebe acréscimo de 1 (0+1)
+            existentes[gasto_no_dia] += 1
+            # não faço mais nada
+            continue
+        #será que é fraude?
+        # calculamos mediana usando def mediana (vetor existentes, 4)
+        m = mediana(existentes,d)
+        # se gasto_no_dia (=10) >= mediana *2
+        if gasto_no_dia >= m * 2:
+            #soma 1 a fraudes
+            fraudes += 1
+            #print("fraudes",fraudes)
+        #vetor existentes na posição 10 (existentes[10]) é acrescido de 1
+        existentes[gasto_no_dia] += 1
+        #print('existentes',existentes[gasto_no_dia])
+        #gasto_antigo =expenditure[0-4] por isto só começamos no dia 4, daí gasto_antigo receberá valor do dia 0 (=10)
+        gasto_antigo = expenditure [dia - d]
+        print("gasto_antigo",gasto_antigo)
+        #existentes na posição 10 é decrescido de 1
+        existentes[gasto_antigo] -= 1
+    #print (existentes)
+    #retorna fraudes que vale 0, depois 1, 2, 3 , 4
+    return fraudes
+
+
+            
+        
+print(activityNotifications([10,20,30,40,50],4))
+        
+print(activityNotifications([10,20,25,40,50],4))
+    
+print(activityNotifications([10,20,30,40,50],3))
+
+print(activityNotifications([30,10,20,40,50],3))
+    
 # -
 
 #crie lista com 'a','b' e 'c'
@@ -117,7 +241,9 @@ def activityNotifications(expenditure, d):
         existentes[gasto_no_dia] += 1
         gasto_antigo = expenditure [dia - d]
         existentes[gasto_antigo] -= 1
+    #print (existentes)
     return fraudes
+    
 
 
 # +
