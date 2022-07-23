@@ -13,6 +13,47 @@
 #     name: python3
 # ---
 
+# ### vetor, ceil, += , for 42-100, raise Exception, def ([lista],int)
+
+# +
+import math
+# crie um vetor de 200 posições, todas posições com 0 
+vetor = [0] * 201
+posicao = 3
+#arredondar para cima
+arredondado = math.ceil(posicao/2)
+#altere o valor da terceira posição do vetor
+vetor[posicao] = 333
+print('#1')
+print('arredondado:', arredondado)
+#soma um
+
+print('#2')
+vetor[arredondado] += 1
+print(vetor)
+
+print('#3')
+#loop de 42 a 45
+#no limite final, some 1
+for i in range(42, 46):
+    print(i) 
+
+print('#4')
+for gasto in range(3):
+    print(gasto)
+
+print('#5')
+despesas = [10,20,30,40,50]
+print("despesas3:",despesas[3])
+despesas[3]=42
+print("despesas3:",despesas[3])
+
+print('#6')
+def exibe(lista,valor):
+    return("lista",lista, "valor",valor)
+    raise Exception("função exibe tem erro")
+print(exibe([10,20,30,40,50],4))
+
 # +
 #versão comentada código guilherme silveira fraudulent...
 import math
@@ -122,7 +163,7 @@ def activityNotifications(expenditure, d):   #recebe expenditure (=lista de 5 it
         existentes[gasto_no_dia] += 1
         #print('existentes',existentes[gasto_no_dia])
         #gasto_antigo =expenditure[0-4] por isto só começamos no dia 4, daí gasto_antigo receberá valor do dia 0 (=10)
-        gasto_antigo = expenditure [dia - d]
+        #gasto_antigo = expenditure [dia - d]
         print("gasto_antigo",gasto_antigo)
         #existentes na posição 10 é decrescido de 1
         existentes[gasto_antigo] -= 1
