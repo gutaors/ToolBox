@@ -13,6 +13,25 @@
 #     name: python3
 # ---
 
+
+
+
+
+
+
+
+# +
+#cliente.search_recent_tweets(query='Petrobras', *, end_time=None, expansions=None, max_results=None, media_fields=None, next_token=None, place_fields=None, poll_fields=None, since_id=None, sort_order=None, start_time=None, tweet_fields=None, until_id=None, user_fields=None, user_auth=False)
+#cliente.search_recent_tweets(query='BBB')
+
+#cliente.search_recent_tweets(query='Petrobras')
+
+# -
+
+
+
+import this
+
 # ### vetor, ceil, += , for 42-100, raise Exception, def ([lista],int)
 
 # +

@@ -728,5 +728,17 @@ Jupyter Notebook \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\
 				cria uma lista com nomes de features
 				cria X com features de um dataframe, pegando só aquelas que estão na lista acima
 				cria Y pegando feature específica de um dataframe
-			
+	zumbis python para zumbis Análise de Dados Públicos
+		\\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\zumbis\AnaliseDadosPublicos
+		twitter-tweets-acesso.ipynb
+			como fazer login na api twitter
+			query na api do twitter
+			organizar os dados
+			montar tabela com frequencia que cada palavra aparece nos tweets
+			fazer dataframe com tabela de frequencia de palavras nos tweets
+			renomear colunas dataframe
+			formatar percentuais no dataframe
+			fazer coluna com valores cumulativos somatório valores
+			ordenar dataframe pelo índice ou por outra coluna
+			API dados abertos educacao dadosabertosbr.com/api (video 20)
 	
