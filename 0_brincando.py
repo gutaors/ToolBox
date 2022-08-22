@@ -13,7 +13,29 @@
 #     name: python3
 # ---
 
-
+#este cara aqui corrige latitude e longitude, vamos olhar o exemplo
+#124,,,3134.2134,3,,,24
+def fix_coord(s):
+    try:
+        #Troca tudo por . 124...3134.2134.3...24
+        s = s.replace(',', '.')
+        #quebra no ponto 124   3134   2134  3  24
+        split_s = s.split('.')
+        #se tem mais que dois blocos faz loop
+        #os blocos são'123', '', '', '4567', '8901', '2', '', '', '34'
+        if len(split_s) > 2:
+            #print(split_s)
+            #pega o primeiro bloco e coloca um ponto no final
+            s_fix = split_s[0] + '.'
+            #loop do segundo bloco (split) em diante, simplesmente concatenando os blocos
+            for s_ in split_s[1:]:
+                s_fix += s_
+            return s_fix
+        else:
+            return s
+    except:
+        return s
+fix_coord('123,,,4567.8901,2,,,34')
 
 
 

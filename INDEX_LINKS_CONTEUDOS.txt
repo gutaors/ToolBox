@@ -183,6 +183,7 @@ Google Docs
 		Visualizing Geospatial Data in Python.docx
 		Web Scraping in Python.docx
 		Winning a Kaggle Competition in Python.docx
+			é o caso dos taxis de NY
 		Writing Efficient Python Code.docx
 	Fast.AI
 		2 parte DeepLearning.docx
@@ -460,6 +461,11 @@ no VSCODE
 		Objetos
 		102. @property - Getters e Setters - Python
 		Orientado a Objetos
+			Métodos de instância
+			métodos de classe
+			métodos estáticos
+			como funcionar rand randint
+			como pegar ano atual com datetime.now())
 		103. Atributos de Classe - Python Orientado a
 		Objetos
 		104. Encapsulamento - Python Orientado a
@@ -728,6 +734,9 @@ Jupyter Notebook \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\
 				cria uma lista com nomes de features
 				cria X com features de um dataframe, pegando só aquelas que estão na lista acima
 				cria Y pegando feature específica de um dataframe
+	toolbox
+		brincando \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\toolbox\0_brincando.ipynb
+			como remover várias vírgulas e pontos de uma sequencia numérica e preservar somente o primeiro ponto (coordenadas lat long geográficas)
 	zumbis python para zumbis Análise de Dados Públicos
 		\\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\zumbis\AnaliseDadosPublicos
 		twitter-tweets-acesso.ipynb
@@ -740,5 +749,9 @@ Jupyter Notebook \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\
 			formatar percentuais no dataframe
 			fazer coluna com valores cumulativos somatório valores
 			ordenar dataframe pelo índice ou por outra coluna
-			API dados abertos educacao dadosabertosbr.com/api (video 20)
+			(video 18)
+				API como ler a documentação da API da Câmara dos Deputados
+			(video 20)	
+				API dados abertos educacao dadosabertosbr.com/api 
+
 	
