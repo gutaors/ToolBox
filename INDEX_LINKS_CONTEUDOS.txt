@@ -178,6 +178,12 @@ Google Docs
 		Statistical Thinking in Python (Part 2).docx
 		Statistical Thinking in Python part 1.docx
 		Streamlined Data Ingestion with pandas.docx
+			importar dados, ler dados de arquivos de vários tipos
+			ler arquivo tsv
+			ler dados agrupados
+			ler planilhas e worksheets
+			append dataframes
+			merge dataframes
 		Supervised Learning with scikit-learn.docx
 		Supply Chain Analytics in Python.docx
 		Visualizing Geospatial Data in Python.docx

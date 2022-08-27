@@ -13,6 +13,28 @@
 #     name: python3
 # ---
 
+# + [markdown] tags=[]
+# # Rsplit de um json colocando em df, pega a última palavra do split
+# -
+
+df = pd.DataFrame([
+    {
+        'codigo_siorg': int(unidade['codigoOrgaoEntidade'].rsplit('/', 1)[-1]),
+        'nome_orgao_siorg': unidade['nome']
+    }
+    for unidade in data['unidades']
+]) 
+
+# ### Isin
+
+import numpy as np
+import pandas as pd
+df = pd.DataFrame({'num_legs': [2, 4], 'num_wings': [2, 0]},
+                  index=['eagle', 'cat'])
+df
+df.isin([0, 2])
+
+
 #este cara aqui corrige latitude e longitude, vamos olhar o exemplo
 #124,,,3134.2134,3,,,24
 def fix_coord(s):
