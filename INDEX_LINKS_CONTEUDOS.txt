@@ -1,4 +1,6 @@
 De materiais que preciso catalogar o conteúdo são 56 arquivos-----------------------------
+Curso Airflow Lamberti Udemy(aulas)
+	42- Como entrar no container docker do airflow e verificar arquivo e fazer select no postgres
 
 Google Docs
 	DataCamp
@@ -46,7 +48,7 @@ Google Docs
 		Machine Learning for Time Series Data in Python.docx
 		Machine Learning with Tree-Based Models in Python.docx
 			Manipulating DataFrames with pandas.docx
-					ler o csv e já determinar qual a index_col
+					ler o csv e já determinar qual o índice, a index_col
 					ordenacao por indice
 					indexacao posicional
 					indexando e rearranjando
