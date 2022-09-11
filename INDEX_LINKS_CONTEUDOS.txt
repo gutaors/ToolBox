@@ -227,6 +227,7 @@ Trilhas kaggle.docx
 		Machine Learning Resumo.xlsx
 		Pipeline - deploying.of.machine.learning.models.docx
 		SSIS.docx
+
 Collaboratory colab
 	mariofilho
 		live 12 series temporais com prophet  - https://colab.research.google.com/drive/1ymsT-iUCrlpo9gpAAItuHLh9HVvC9Rx8#scrollTo=VohAMru6dF78
@@ -333,7 +334,7 @@ Collaboratory colab
 			consumir pickle
 			ativar ambiente conda para o Python
 
-no VSCODE 
+Códigos Python 
 	Python3
 		Conteúdo do curso
 		Seção 1: Introdução - Preparando meu
@@ -763,3 +764,10 @@ Jupyter Notebook \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\
 				API dados abertos educacao dadosabertosbr.com/api 
 
 	
+Códigos Airflow /dev/ministerio/airflow-dags/dags/
+	acoes_google /dev/ministerio/airflow-dags/dags/acoes_google
+		tutorial_dag.py
+			ler uma api usando json
+			verificar se tem mais de 1000 linhas
+			se sim execute uma task
+			se não execute outra
