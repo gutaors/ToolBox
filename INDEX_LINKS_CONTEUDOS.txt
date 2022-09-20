@@ -57,10 +57,11 @@ Google Docs
 					limitando dados
 					filtra dataframe usando listas com nomes das linhas e das colunas que quer filtrar
 					filtrando colunas usando outras colunas
+					cria um array com uma faixa de valores baseado em um campo do dataset filtra o dataframe baseado neste array e joga em um novo dataframe chamado high_turnout_df imprime o novo dataframe
 					filtrando usando NaN
 					filtrando colunas que tem menos de 1000 ocorrencias diferentes de NaN (menos de 1000 preenchidos), ou seja, dados dispersos
 					usando apply para transformar coluna
-					usando map com um diconario
+					usando map com um diconario para substituir conteúdo de feature
 					funcoes vetorizadas
 					indexando valores e nomes
 					mudando indice de um dataframe
@@ -745,6 +746,8 @@ Jupyter Notebook \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\
 				cria Y pegando feature específica de um dataframe
 	toolbox
 		brincando \\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\toolbox\0_brincando.ipynb
+			mostrar o conteúdo completo de uma coluna no pandas mostrar coluna completa pandas sem truncar
+			um colchete é uma série keys_to_remove[coluna] dois colchetes é uma lista keys_to_remove[[coluna]]
 			como remover várias vírgulas e pontos de uma sequencia numérica e preservar somente o primeiro ponto (coordenadas lat long geográficas)
 	zumbis python para zumbis Análise de Dados Públicos
 		\\wsl.localhost\Ubuntu\home\gutao\dev\jupyter\notebooks\zumbis\AnaliseDadosPublicos
