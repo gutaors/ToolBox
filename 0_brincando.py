@@ -13,6 +13,61 @@
 #     name: python3
 # ---
 
+# ### mostrar o conteúdo completo de uma coluna no pandas mostrar coluna completa pandas
+# ### coluna sem truncar
+
+import pandas as pd
+pd.set_option('display.max_colwidth', None)
+df  =  pd.read_csv('ab_data.csv',encoding='utf-8-sig')
+df.head()
+
+stocks_adj_close_f = df.iloc[
+        0
+    ]
+
+  stocks_adj_close_f = (
+        stocks_adj_close_f.reset_index()
+    ) 
+
+stocks_adj_close_f.insert(loc=1, column="Date", value=stocks_adj_close_f.columns[1])
+
+# +
+#stocks_adj_close_f.set_index("Symbol", inplace=True)
+# -
+
+df.head(3)
+
+# ### um colchete é uma serie,  type(df['user_id']), dois colchetes é um campo de um dataframe ( que pode virar uma lista),  type(df[['user_id']])
+
+import os
+import pandas as pd
+#note que as barras aqui embaixo são para a direita
+os.chdir(".")
+df  =  pd.read_csv('ab_data.csv',encoding='utf-8-sig')
+df.head()
+# um colchete é uma serie
+type(df['user_id'])
+# dois colchetes é um campo de um dataframe ( que pode virar uma lista)
+type(df[['user_id']])
+
+# +
+
+#código lá do tutorial airflow que está nas minhas dags e no vídeo
+# https://www.youtube.com/watch?v=4DGRqMoyrPk&t=282s
+import pandas as pd
+import requests
+import json
+
+def captura_conta_dados():
+    url = "https://data.cityofnewyork.us/resource/rc75-m7u3.json"
+    response = requests.get(url)
+    df = pd.DataFrame(json.loads(response.content))
+    qtd = len(df.index)
+    return qtd
+
+captura_conta_dados()
+# -
+
 # # Codigo de airflow do curso do Lamberti
 
 # +

@@ -96,6 +96,7 @@ Google Docs
 			Merging DataFrames with pandas.docx
 				Lendo DataFrames de arquivos múltiplos lendo vários arquivos 
 				Lendo DataFrames de arquivos múltiplos lendo vários arquivos em loop
+				CONCAT O append está deprecated, usar concat para ler vários csv
 				Combining DataFrames from multiple data files
 				Sorting DataFrame with the Index & columns
 				Reindexing DataFrame from a list
@@ -774,3 +775,17 @@ Códigos Airflow /dev/ministerio/airflow-dags/dags/
 			verificar se tem mais de 1000 linhas
 			se sim execute uma task
 			se não execute outra
+	taxigov acoes_google /dev/ministerio/airflow-dags/dags/taxigov
+		taxigov_carga_unificada.py
+			le um arquivo zip
+			lê um csv dentro de um zip
+			lista todos os arquivos dentro do zipfile (referência zipfile.py)
+			verifica se arquivo zip está sem o .zip no nome
+			pega colunas de índice
+			CPF (formatação, dígito verificador)
+    		* 📍 coordenadas geográficas (campos com latitude e longitude)
+    		* 🗺 unidade federativa (Brasil)
+    		* 📃 limitação de campos de texto longos
+    		* 🚘 status da corrida (mapeamento)
+    		* 🖊 motivo da corrida (mapeamento)
+    		* 🏢 órgão responsável (mapeamento)
